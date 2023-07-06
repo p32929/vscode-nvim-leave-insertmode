@@ -17,7 +17,8 @@ function activate(context) {
       // The code you place here will be executed every time your command is executed
       vscode.window.onDidChangeActiveTextEditor((editor) => {
         if (lastEditor !== editor) {
-          vscode.commands.executeCommand("extension.vim_escape")
+          // vscode.commands.executeCommand("extension.vim_escape")
+          vscode.commands.executeCommand("vscode-neovim.escape")
         }
 
         lastEditor = editor
